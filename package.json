@@ -1,0 +1,15 @@
+{
+  "name": "fe-labs-2023",
+  "version": "1.0.0",
+  "description": "```JavaScript\r Copyright (c)2023 Promineo Tech\r Promineo Tech Academic Team\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  }
+}
