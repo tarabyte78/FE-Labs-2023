@@ -130,4 +130,16 @@ Question 2. Creating & 'console.log()'ing variables \n`);
         console.log (fullName + " lives at " + streetAddress)
 
 
+
+
+///
+
+
+
+
+
+
+
+
+
     console.log('-----------Finished------------')
