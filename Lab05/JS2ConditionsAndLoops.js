@@ -45,7 +45,19 @@ Question 1: Driving the speed limit.. ? \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+   var mySpeed = 65
+   var speedLimit = 75
 
+      if (mySpeed > speedLimit) {
+      console.log ("Slow Down! Mom is mad!")
+      }
+      if (mySpeed == speedLimit) {
+      console.log ("Everyone Is Happy")
+      }
+      if (mySpeed < speedLimit) {
+      console.log("Speed up! Dad is mad!")
+      }
+   
 
 /*-------------------------------------------------------*/
 
@@ -65,6 +77,15 @@ Question 2: Is it time to wake up for work? \n`);
  * ↓ YOUR CODE HERE ↓ */
 
 
+   var alarmSet = false
+   var weekDay = true
+
+      if (weekDay && alarmSet) {
+         console.log ("Sound Alarm")
+      } else {
+         console.log ("I can sleep in")
+      } 
+      
 
 /*-------------------------------------------------------*/
 
@@ -82,6 +103,14 @@ Question 3: Username & Password \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+   var username =  "Tummy123"
+   var password = "12345"
+
+   if (username == "Tommy123" && password == "12345" || username == "Timmy456" && password =="6789") {
+      console.log ("Admin login Successful")
+   } else {
+      console.log ("Admin Access Denied")
+      }
 
 
 /*-------------------------------------------------------*/
@@ -102,7 +131,23 @@ Question 4: Student Class \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+      var studentClass
+      var studentGrade = 10
 
+      if (studentGrade >= 0 && studentGrade <= 6) {
+            studentClass = "Elementary"
+         } else if (studentGrade == 7 || studentGrade == 8) {
+            studentClass = "Middle"
+         } else if (studentGrade == 9) {
+            studentClass = "Freshman"
+         } else if (studentGrade == 10) {
+            studentClass = "Sophmore"
+         } else if (studentGrade == 11) {
+            studentClass = "Junior"
+         } else if (studentGrade == 12) {
+            studentClass = "Senior"
+         }
+      console.log (studentClass)
 
 /*-------------------------------------------------------*/
 
@@ -116,6 +161,31 @@ Question 5: Loops! \n`);
  *         Print the iterator if the remainder (% // modulus) is 0 when divisible by 4.
  * 
  * ↓ YOUR CODE HERE ↓ */
+
+   //let i = 0 //start place
+   //i == -10 //stop condition
+   //i-- //incrementor
+
+//STEP 1 - Answer//
+   //for (var i = 10; i > -11; i--) {
+      //console.log (i)
+      //}
+   
+//STEP 2 - Answer//
+   //   let counter = 1
+   //   do {
+   //      console.log(counter)   
+   //      counter++
+   //     } while (counter <= 20)
+
+//STEP 3 - Answer//
+      let counter = 1
+      do {
+      if (counter % 4 == 0){
+      console.log(counter)   
+      }
+      counter++
+      } while (counter <= 20)
 
 
 
@@ -131,13 +201,11 @@ Question 6: Debugging an infinite loop! \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-   /*    
-   for (let i = 11; i > 10; i++) { 
+
+
+   for (let i = 1; i <= 13; i++) { 
       console.log(i);   
    } 
-  */
-
-
 
 
 console.log('-----------Finished------------')
