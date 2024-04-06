@@ -265,7 +265,7 @@ return array;
 /* ↑ YOUR CODE HERE ↑ */
 
 // Sample test cases for the above removeElements function (uncomment to test)
-//console.log(removeElements([1, 2, 3, 4, 5])); //should return [] (an empty array)
+console.log(removeElements([1, 2, 3, 4, 5])); //should return [] (an empty array)
 
 
 
