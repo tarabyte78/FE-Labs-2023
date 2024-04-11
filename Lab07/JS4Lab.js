@@ -44,10 +44,10 @@ Question 1: Declaring Let and Const variables`)
  *
  * ↓ YOUR CODE HERE ↓ */
 
-const food = 'Cookies'
-const drink = 'Milk'
-let myName = 'Tara'
-let friend = 'River'
+let food = 'Cookies'
+let drink = 'Milk'
+const myName = 'Tara'
+const friend = 'River'
 
 console.log (food, drink, myName, friend)
 
@@ -89,12 +89,12 @@ Question 2a: Oh no`)
  *
  * ↓ YOUR CODE HERE ↓ */
 
-drink.push ('water');
+drink ='water'
 
-console.log (drink)
+console.log(drink)
 
 //Question: Read the error message - in your own words - what does it mean?
-//Answer:
+//Answer:  You can't change a constant variable, so it needs to be changed.
 
 /*---------------------------------- Arrow Functions -------------------------------------*/
 console.log(`-------------------------- 
@@ -113,6 +113,17 @@ Question 3: Arrow Functions`)
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
 
+
+
+const lunchTime = (foodChoice, drinkChoice) => {
+   return `${myName} and ${friend} are having ${foodChoice} and ${drinkChoice}`;
+}
+
+
+console.log(lunchTime('Pizza','Water'))
+
+
+
 //Question: What would your function look like if we were using the old way of creating a function?
 //Answer:
 
@@ -129,5 +140,12 @@ Question 4: Callbacks`)
  * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem') as the argument for the "callbackFunction" parameter.
  *
  * ↓ YOUR CODE HERE ↓ */
+
+const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => {
+   return `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
+}
+console.log (foodForTodayAndTomorrow('lasagna', 'margaritas', lunchTime('Pizza', 'Wine')))
+
+
 
 console.log(`-----------Finished------------`)
