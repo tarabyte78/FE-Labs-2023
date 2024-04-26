@@ -36,29 +36,145 @@ const assert = chai.assert
  * 
 /*--------------------------------------------------------------------*/
 
-describe('JS6 Lab Tests:', () => {
-  describe('Example Question Test: Add Two Numbers', () => {
-    it('#Should return the sum of two numbers', () => {
-      // Copy & paste your debugged code from JS6Lab.js
-      function addTwoNumbers(num1, num2) {
-        return num1 + num2
-      }
-      // Write tests to ensure it works for multiple examples
-      expect(addTwoNumbers(2, 3)).to.equal(5)
-      expect(addTwoNumbers(9, 17)).to.equal(26)
-      expect(addTwoNumbers(750, 250)).to.equal(1000)
-      expect(addTwoNumbers(132780, 443378)).to.equal(576158)
-    })
+/*--------------------------EXAMPLE-------------------------------*/
 
-    describe('Example Failed Test: Add Two Numbers', () => {
-      it('#Should fail', () => {
-        function sumOfTwoNumbers(num1, num2) {
-          num1 + num2
+  describe('JS6 Lab Tests:', () => { 
+    describe('Example Question Test: Add Two Numbers', () => {
+      it('#Should return the sum of two numbers', () => {
+        // Copy & paste your debugged code from JS6Lab.js
+        function addTwoNumbers(num1, num2) {
+          return num1 + num2
         }
+        // Write tests to ensure it works for multiple examples
+        expect(addTwoNumbers(2, 3)).to.equal(5)
+        expect(addTwoNumbers(9, 17)).to.equal(26)
+        expect(addTwoNumbers(750, 250)).to.equal(1000)
+        expect(addTwoNumbers(132780, 443378)).to.equal(576158)
+      })
 
-        expect(sumOfTwoNumbers(2, 3)).to.equal(5)
+      describe('Example Failed Test: Add Two Numbers', () => {
+        it('#Should fail', () => {
+          function sumOfTwoNumbers(num1, num2) {
+            num1 + num2
+          }
+
+          expect(sumOfTwoNumbers(2, 3)).to.equal(5)
+        })
+      })
+/*--------------------------QUESTION 1 A-------------------------------*/
+
+    describe ('Question 1a: Sorted array of numbers', () => {
+       it ('#Should sort an array in ascending order', () => {
+        let arrayOfNumbers = [1, 5, 3, 2, 4]
+        arrayOfNumbers = arrayOfNumbers.sort((a, b) => a - b)
+        
+        expect(arrayOfNumbers).to.deep.equal([1,2,3,4,5])
       })
     })
-  })
-  /*--------------------------NEW TESTS BELOW-------------------------------*/
+
+/*--------------------------QUESTION 1 B-------------------------------*/
+
+    describe('Question 1b: Manage my wallet', () => {
+      
+        class Wallet {
+          constructor(startingMoney) {
+          this.money = startingMoney;
+         }
+        
+         addMoney(amount) {
+           this.money += amount;
+         }
+        
+         removeMoney(amount) {
+           this.money -= amount;
+         }
+       }
+      
+       const myWallet = new Wallet(100);
+       myWallet.removeMoney(14.99);
+       myWallet.addMoney(3);
+      
+
+      it ('#Should calculate how much money is in my wallet', () => {
+      expect (myWallet.money).to.equal (88.01);
+      });
+    });
+ 
+/*--------------------------QUESTION 1 C-------------------------------*/
+  describe(`1c: Day of the Week`, () => {
+
+    const dayOfTheWeek = (num) => {
+      switch (num) {
+     case 1:
+      return 'Monday'
+       break;
+     case 2:
+      return 'Tuesday'
+       break;
+     case 3:
+      return 'Wednesday'
+       break;
+     case 4:
+      return 'Thursday'
+       break;
+     case 5:
+      return 'Friday'
+       break;
+     case 6:
+      return 'Saturday'
+       break;
+     case 7:
+      return 'Sunday'
+       break;
+     default:
+      console.log('Err. Something went wrong.')
+       }
+     }
+
+     it ('#Should return Wednesday with input number 3', () => {
+      expect(dayOfTheWeek(3)).to.equal('Wednesday');
+
+     it ('#Should dispay Sunday with input 7', () => {
+      expect(dayOfTheWeek(7)).to.equal('Sunday')
+    }
+  )
+})
+    
+/*--------------------------QUESTION 1 D-------------------------------*/
+
+describe (`1d: Only wizards shall pass!`, () => {
+
+  const movieCharacters = [
+    {
+    character: 'Howl',
+      isAWizard: true,
+      quote: `You're wearing that hat? After all the magic I used to make your dress pretty?`,
+   },
+    {
+    character: 'Kalcifer',
+      isAWizard: false,
+      quote: `I don't cook! I'm a scary and powerful fire demon!`,
+    },
+    {
+    character: 'Gandalf',
+     isAWizard: true,
+     quote: `You shall not pass!`,
+   },
+    {
+    character: 'Luke Skywalker',
+     isAWizard: false,
+      quote: `May the Force be with you.`,
+    },
+  ]
+ 
+  for (let character of onlyWizards(movieCharacters)) {
+    it ('#Should return only Wizard Characters', () => {
+      expect(character.isAWizard).to.equal(true)
+
+    })
+  }
+
+})
+})   
+})
 })
