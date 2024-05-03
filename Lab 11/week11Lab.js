@@ -38,13 +38,16 @@
 	* 
 	* ↓ YOUR CODE HERE ↓ */
 
-
-
-
-
-
-
-
+	let div = $('.put-here');
+	let input = $('#input-value');
+	
+	function replaceTextInDiv(){
+		let newText = input.val();
+		div.text(newText);
+		input.val("");
+	}
+	
+	console.log($('#input-value').val());
 
 
 /*------------------------------------------------*/
@@ -57,12 +60,9 @@
 	* 
 	* ↓ YOUR CODE HERE ↓ */
 
+	$('.dog').before("<div><img src='images/fish.png' width='200'><div>");
 
-	
-
-
-
-
+	$('.dog').after("<div><img src='images/cat.png' width='200'><div>");
 
 
 /*-------------------------------------------------*/
