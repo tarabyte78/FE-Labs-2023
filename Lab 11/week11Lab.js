@@ -68,18 +68,13 @@
 /*-------------------------------------------------*/
 // Question 3: Remove 
  
-/* In the HTML file, there is are 3 PARAGRAPHS with some random text (Lorem Ipsum). Each paragraph has its own id: "lorem1", "lorem2", or "lorem3".
+/* In the HTML file, there are 3 PARAGRAPHS with some random text (Lorem Ipsum). Each paragraph has its own id: "lorem1", "lorem2", or "lorem3".
 	* Step 1: Write some code that will remove the second PARAGRAPH from the page.(See documentation: https://api.jquery.com/remove/)
 	* Step 2: Save after your changes, the second PARAGRAPH should be gone.
-	* 
 	*
 	* ↓ YOUR CODE HERE ↓ */
 
-
-
-
-	
-
+	$('#lorem2').remove ();
 
 
 /*-------------------------------------------------*/
@@ -110,11 +105,12 @@ $.get(CATS_API_URL, (data)=> {
  	* 
  	* ↓ YOUR CODE HERE ↓ */
 
+let joke_api = 'https://official-joke-api.appspot.com/random_joke'
 
-
-
-
-
+$.get(joke_api, (data) => {
+	console.log (data);
+	$('.jokes').prepend(`<p> Q: ${data.setup} <br> A: ${data.punchline} </p>`)
+})
 
 
 /*--------------------------------------------------*/
@@ -168,11 +164,15 @@ $.get(CATS_API_URL, (data)=> {
 	* ↓ YOUR CODE HERE ↓ */
 
 
-	
+$.get('http://localhost:3000/gradebook/8', (data) => {
+	console.log (data);
+	$('.result').text(data.firstname + " " + data.lastname + ", Grade: "  + data.grade + "%")
+		})
 
-
-
-
+$.get('http://localhost:3000/gradebook/2', (data) => {
+	console.log(data);
+	$('.new').text(data.firstname + " " + data.lastname + ", Grade: " + data.grade + "%")
+})
 
 
 /*--------------------------------------------------*/
@@ -205,7 +205,21 @@ $(".test").on("click", function(){
 	* ↓ YOUR CODE HERE ↓ */
 
 
+	$('.postBtn').on ('click', function() {
+		let first = $("#firstname").val();
+		let last = $("#lastname").val();
+		let grade = $("#grade").val(); 
+		
+	
+		const API = "http://localhost:3000/gradebook";
 
+		$.post(API, {
+			"firstname": first,
+			"lastname": last,
+			"grade": grade
+	 });
+		
+	});
 
 
 
