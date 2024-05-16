@@ -76,7 +76,9 @@ Part 1: Setup your JSON server`)
  *
  * ↓ YOUR CODE HERE ↓ */
 
-/*------------------------ Part 2: HTTP Verb: GET ------------------------*/
+const URL_endpoint = 'http://localhost:3000/studentRoster'
+
+/*----------------- Part 2: HTTP Verb: GET --------------------*/
 console.log(
   `-------------------------- 
 Part 2: GET and displaying the information`
@@ -92,6 +94,19 @@ Part 2: GET and displaying the information`
  *
  * ↓ YOUR CODE HERE ↓ */
 
+$.get(URL_endpoint).then(data => {
+  data.map (student => {
+    $('tbody').append (
+      $(`
+      <tr>
+        <td>${student.fullName}</td>
+        <td>${student.researchAssignment}</td>
+        <td>${student.id}</td>
+      </tr>
+      `)
+)})
+})
+  
 /*------------------------ Part 3: HTTP Verb: POST ------------------------*/
 console.log(
   `-------------------------- 
@@ -116,6 +131,10 @@ Part 3: POST and adding new students`
  *         Your button should now post a new user on click.
  *
  * ↓ YOUR CODE HERE ↓ */
+
+
+
+
 
 /*------------------------ Part 4: HTTP Verb: DELETE ------------------------*/
 console.log(
