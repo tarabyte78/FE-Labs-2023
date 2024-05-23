@@ -1,0 +1,23 @@
+.navBar {
+    width: 100vw;
+    background-color: rgb(16, 69, 100);
+    color:aliceblue;
+    font-size: 20px;
+    padding: 15px;
+}
+    
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 1em;
+    padding-right: 2em
+}
+
+nav ul li:hover {
+    color: aquamarine;
+}

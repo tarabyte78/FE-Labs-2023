@@ -25,7 +25,7 @@
 
 /* ------------------ Part 1: Creating a Nav Bar Component --------------------- */
 /**
- * Step 1: Create a new file in our src folder called Nav.js
+ * ``Step 1: Create a new file in our src folder called Nav.js
  * Step 2: Create the base format for a class-based component.
  *         Inside of the return(), return: <nav>Nav</nav>
  * Step 3: In your App.js, import your <Nav> component inside of the div in return()
@@ -42,7 +42,6 @@
  *         Alternatively, refer to Week 9 and use bootstrap instead.
  *         Remember when we give elements classes in React, we use className=""
  * */
-
 /* ------------------ Part 2: Creating a Welcome Section --------------------- */
 /**
  *  Step 1: Copy/paste the code below above your function App() & below your imports
@@ -72,9 +71,22 @@
 
 /* -- ALL YOUR COMPONENT/STYLE IMPORTS HERE -- */
 import './App.css'
+import Nav from './Nav'
+import WelcomeSection from './WelcomeSection'
 
 function App() {
-  return <div className="App"></div>
+  return <div className='App'>
+    <Nav/>
+    <WelcomeSection/>
+    </div>
 }
+
+
+let date = new Date()
+  let singleUser = {
+    name: 'John',
+    time: date.toDateString(),
+}
+
 
 export default App
