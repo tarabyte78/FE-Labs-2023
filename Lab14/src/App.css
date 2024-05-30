@@ -38,3 +38,16 @@
   background-color: #eeeeee;
   padding: 1em;
 }
+
+.appointmentTable {
+  border: 2px double black;
+  text-align: center;
+  margin: 8px auto;
+  border-radius: 5px;
+}
+
+.appointmentTable thead {
+  background-color: rgb(98, 107, 202);
+  color: white;
+  font-size: 15px;
+}
